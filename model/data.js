@@ -3,7 +3,7 @@ const mongoose=require('mongoose');
 const Schema=mongoose.Schema
 
 const dataSchema=new Schema({
-    name:String,
+    siteName:String,
     siteURL:String,
     siteImgURL:String
 })

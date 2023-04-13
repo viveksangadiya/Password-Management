@@ -17,7 +17,7 @@ router.get('/', function(req, res) {
 router.post('/AddPassword', function(req,res){
     const data=new Password(
         {
-            name:req.body.name,
+            siteName:req.body.siteName,
             siteURL:req.body.siteURL,
             siteImgURL:req.body.siteImgURL
         }
@@ -46,7 +46,7 @@ router.put('/UpdatePassword/:id', async function(req, res) {
       if (!password) {
         return res.status(404).json({message: 'Password not found'});
       }
-      password.name = req.body.name;
+      password.siteName = req.body.siteName;
       password.siteURL = req.body.siteURL;
       password.siteImgURL = req.body.siteImgURL;
       const updatedPassword = await password.save();
